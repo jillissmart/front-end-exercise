@@ -1,0 +1,194 @@
+body {
+  background-color: rgb(147, 207, 225);
+  color: #797979;
+  font-size: 1.25em;
+  font-family: Open Sans;
+  box-sizing: border-box;
+}
+
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+}
+
+.flex-container {
+  margin: 2.9375em 0 0 0;
+}
+
+.container {
+  width: 45%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.flex-outer {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-outer li {
+  padding: 15px 0 !important;
+  border-bottom: 1px solid #a4a4a4;
+  text-align: center;
+}
+
+.flex-outer li:last-child {
+  min-height: 20px;
+  border-bottom: 0px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #a4a4a4 !important;
+}
+
+.heading span {
+  text-align: center;
+  color: #353535;
+  font-weight: bold;
+  font-size: 0.8125em;
+  line-height: .5em;
+  padding-top: 10px;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.btn {
+  color: #fff;
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  padding: 0.5625em 1.25em;
+  font-size: 0.625em;
+  text-align: center;
+  margin: .125rem;
+  border-radius: .125em;
+  border: 2px solid #444;
+  background-color: #444;
+  color: $white;
+  text-decoration: none;
+  transition: color .125s ease;
+  overflow: hidden;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 6px -6px #9ca4ab;
+  -moz-box-shadow: 10px 10px 6px -6px #9ca4ab;
+  box-shadow: 10px 10px 6px -6px #9ca4ab;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+  padding-left: 42px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  position: absolute;
+  content: "";
+    /*Needed for the line-height to take effect*/
+  display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before {
+  height: 16px;
+  width: 16px;
+  border: 1px solid;
+  left: -12px;
+  top: 4px;
+        /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it. */;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+  height: 5px;
+  width: 9px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  left: -8px;
+  top: 8px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+
+/*Unhide on the checked state*/
+.checked,
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+.checkbox input[type="checkbox"]:checked + label span {
+  color: #9ca4ab;
+}
+
+.mainBox form {
+  position: relative;
+}
+
+.mainBox {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 15px 15px 6px -6px #9ca4ab;
+  -moz-box-shadow: 15px 15px 6px -6px #9ca4ab;
+  box-shadow: 15px 15px 6px -6px #9ca4ab;
+}
+
+.v {
+  border-left: 2px solid #E77978;
+  position: absolute;
+  display: block;
+  width: 10px;
+  z-index: 1000;
+  height: 100%;
+  left: 45px;
+}
